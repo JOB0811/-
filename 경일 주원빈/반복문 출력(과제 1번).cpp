@@ -69,41 +69,37 @@ void main()
 	printf("\n");
 
 
-	/* 1부터 20까지 짝수만 출력
 	
-	int num0 = 1;
-	int num1 = 1;
+	int num0 = 2;
+
 	while(num0 <= 20) 
 	{
-		num0 = num0 + num1;
 		cout << num0 << endl;
-		num0--;
+		num0++;
+		num0++;
 		
 	}
 
 	printf("\n");
 
 
-	int num2 = 1;
-	int num3 = num2 - 1;
+	int num1 = 2;
 	do 
 	{
-		cout << num2 << endl;
-		num2++;
-		num2 = num2 - num3;
+		cout << num1 << endl;
+		num1++;
+		num1++;
 
-	} while (num2 <= 20);
+	} while (num1 <= 20);
 
 	printf("\n");
 
-	int numA = 1;
-	int numB = numA - 1;
-	for (; numA <= 20; numA++) {
+	for (int numA = 2; numA <= 20; numA++) {
 		cout << numA << endl;
-		numA = numA - numB;
+		numA++;
 	}
 	
-	*/
+	
 
 
 		

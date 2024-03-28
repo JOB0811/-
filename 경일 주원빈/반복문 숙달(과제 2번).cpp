@@ -29,21 +29,27 @@ using std::endl;
 void main() 
 {
 	int i = 0;
-	int j = -5;
-	int k = i + j;
-	while (k <= -15) {
-		cout << "숫자를 입력해 주세요 :";
+	int j = i - 5;
+
+	do {
 		cin >> i;
+
 		if (i < -10 || i > 10) {
 			break;
 		}
-		cout << "연산 값은" << k << "입니다." << endl;
-		continue;
 
-	}
+		while (i < -15)
+		{
+
+		}
+
+
+		
+
+	} while (i < -15);
+	
+
 
 	
 
 
-
-}
