@@ -32,40 +32,68 @@ using std::endl;
 
 */
 
-
-
-string i;
-int count;
+int num = 0;
+int count = 0;
 int Rsp();
-const int R = 1;
-const int S = 0;
+const int R = 0;
+const int S = 1;
 const int P = 2;
 
 void main() {
-	cout << "(1)가위 (2)바위 (3)보" << endl;
-	while (count <= 5)
+	cout << "(0)가위 (1)바위 (2)보 중에서 숫자를 선택해주세요 :";
+
+
+	for(count = 0; count <= 5; count++)
 	{
+		srand(time(NULL));
+		int com = rand() % 3;
+
+		if (num < 0 || num > 2)
+		{
+			cout << "해당하는 숫자를 다시 입력해주세요!" << endl;
+		}
+
+
 		cout << "3가지 중에서 뭘 낼지 선택해 주세요 :" << endl;
-		cin >> i;
-		Rsp();
+		cin >> num;
 
-		i._Equal(Rsp)
+		if (num == 0) {
+			if (com == 2) {
+				cout << "이겼습니다! 축하합니다" << endl;
+			}
+			else {
+				cout << "컴퓨터가 이겼습니다!" << endl;
+			}
+		}
+		if (num == com)
+		{
+			cout << "비겼습니다!" << endl;
+		}
 
+		if (num == 1) {
+			if (com == 0) {
+				cout << "이겼습니다! 축하합니다" << endl;
+			}
+			else {
+				cout << "컴퓨터가 이겼습니다!" << endl;
+			}
 
+			if (num == 2) {
+				if (com == 1) {
+					cout << "이겼습니다! 축하합니다" << endl;
+				}
+				else {
+					cout << "컴퓨터가 이겼습니다!" << endl;
+				}
+			}
 
-
-
-		count++;
+			count++;
+		}
 	}
 }
 
 
 
-int Rsp()
-{
-	int com = rand() % 3 + 1;
-
-}
 
 
 
