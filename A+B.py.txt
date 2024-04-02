@@ -1,5 +1,0 @@
-T = int(input()) # 테스트 해볼 횟수인 T를 선언
-
-for _ in range(T): # T의 횟수만큼 문장을 반복
-  a,b = map(int, input().split())
-  print(a+b) 
