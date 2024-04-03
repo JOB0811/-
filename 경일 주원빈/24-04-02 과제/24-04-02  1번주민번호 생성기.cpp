@@ -1,3 +1,13 @@
+#include<iostream>
+#include<stdlib.h>
+#include<time.h>
+
+
+
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 /*
 (오늘 배운 문자열 지식을 이용해서 과제를 만들어보자. / 4대 문자열 시리즈는 사용하지 않았으면 좋겠다)
@@ -18,3 +28,25 @@
 - 그리고 마지막 6자리는 랜덤으로 출력
 ㄴ 단 0이 오면 안된다. (뒷자리 주민번호를 생성할때 0이라는 숫자가 하나라도 들어가면 안되게 예외처리)
 */
+
+
+int fourYear; // 년도를 4자리로 입력받는 경우
+int twoYear; // 년도를 2자리로 입력받는 경우
+int month31[31]; // 01~12 or 1 ~12월중 31일인 달
+int month30[30]; // 01~12 or 1~12월중 30일인 달
+int month28[28];//  28일인 달(2월)
+int day31[31]; // 01 ~31 or 1~31 or 01~30 or 1~30 , 01~28 or 1~28 가능, 아마 달을 선택함에 따라서 변수를 다르게 줘야할거 같음.
+int day30[30]; 
+int day28[28];
+string decideSex;
+
+
+
+
+
+
+
+void main()
+{
+
+}
