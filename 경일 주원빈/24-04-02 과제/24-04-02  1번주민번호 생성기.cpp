@@ -30,23 +30,25 @@ using std::endl;
 */
 
 
-int fourYear; // 년도를 4자리로 입력받는 경우
-int twoYear; // 년도를 2자리로 입력받는 경우
-int month31[31]; // 01~12 or 1 ~12월중 31일인 달
-int month30[30]; // 01~12 or 1~12월중 30일인 달
-int month28[28];//  28일인 달(2월)
-int day31[31]; // 01 ~31 or 1~31 or 01~30 or 1~30 , 01~28 or 1~28 가능, 아마 달을 선택함에 따라서 변수를 다르게 줘야할거 같음.
-int day30[30]; 
-int day28[28];
-string decideSex;
-
-
-
+int year4[4];
+int year2;
+int monthDay[4];
+char DecideSex;
+int backnumber6[6] = {};
 
 
 
 
 void main()
 {
+	cout << "생년 월일을 입력해 주세요 (4자리or2자리) : " << endl;
+	
+	for (int i = 0; i < 4; i++)
+	{
+		cin >> year4[i];
+	}
 
+	cout << year4;
 }
+
+
