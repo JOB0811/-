@@ -1,10 +1,16 @@
 #include<iostream>
 #include<stdlib.h>
 #include<time.h>
+#include<algorithm>
+#include<random>
 
 using std::cout;
 using std::cin;
 using std::endl;
+using std::string;
+using std::shuffle;
+using std::random_device;
+using std::mt19937;
 /*
 
 -타임 어택 과제 - (금요일 시행)
@@ -47,4 +53,28 @@ using std::endl;
 */
 
 
-char ♠
+int count = 0;
+int betting = 10000;
+int betMoney = 1000;
+string card[] = { "♣1","♣2","♣3","♣4","♣5","♣6","♣7","♣8","♣9","♣10","♣11","♣12","♣13"
+				 ,"♠1","♠2","♠3","♠4","♠5","♠6","♠7","♠8","♠9","♠10","♠11","♠12","♠13"
+				 ,"♥1","♥2","♥3","♥4","♥5","♥6","♥7","♥8","♥9","♥10","♥11","♥12","♥13"
+				 ,"◆1","◆2","◆3","◆4","◆5","◆6","◆7","◆8","◆9","◆10","◆11","◆12","◆13" };
+
+
+void main()
+{
+		int size = sizeof(card) / sizeof(card[0]);
+		random_device Shuffle;
+		mt19937 g(Shuffle());
+		shuffle(begin(card), end(card), g);
+
+
+		cout << "셔플된 카드: ";
+		for (int i = 0; i < size; ++i) {
+			string fNumber = card[i].substr(0,1); //특수문자 or 특수문자와 십의자리
+			string bNumber = card[i].substr(1); //일의자리 숫자
+			cout << fNumber <<  bNumber << " ";
+		}
+		cout << endl;
+	} 
