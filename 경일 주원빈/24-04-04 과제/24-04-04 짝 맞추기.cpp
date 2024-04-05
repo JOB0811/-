@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<time.h>
 #include<stdlib.h>
@@ -62,85 +63,153 @@ time 함수로 유지되는 함수에 5초뒤 풀리게 코드 작성
 - 노트에 적어온다.
 */
 
-int shape1[10]; // 색이 없는 문양
-int shape2[10]; // 색이 있는 문양
-int shapeFair[20]; //문양을 섞은뒤 저장할 덱
-int mtShape = 0; // 맞출시, 유지시킬 문양
+char front[20]; // 앞판
+char back[20]; // 뒷판
+int num;
 
 
 
 
 void main()
 {
+
 	srand(time(NULL));
-
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < 20; i++) //앞판
 	{
-		shapeFair[i] = i;
-	}
-
-	for (int i = 0; i < 10000; i++)
-	{
-		//셔플
-		int index1 = rand() % 20;
-		int index2 = rand() % 20;
-		int temp = shapeFair[index1];
-		shapeFair[index1] = shapeFair[index2];
-		shapeFair[index2] = temp;
-	}
-
-
-
-
-	for (int i = 0; i < 2; i++)
-	{
-		shape1[i] = shapeFair[mtShape + 1] / 5;
-
-
-		switch (shape1[i])
+		front[i] = 35;
+		cout << front[i];
+		if (i % 5 == 4)
 		{
-		case 0:
-			cout << "☆";
-			break;
-		case 1:
-			cout << "◇";
-			break;
-		case 2:
-			cout << "♤";
-			break;
-		case 3:
-			cout << "♡";
-			break;
-		case 4:
-			cout << "♧";
-			break;
-
-		}
-
-	}
-
-	for (int i = 0; i < 2; i++)
-	{
-		shape2[i] == shapeFair[mtShape + 1] / 2;
-
-		switch (shape2[i])
-		{
-		case 0:
-			cout << "★";
-			break;
-		case 1:
-			cout << "◆";
-			break;
-		case 2:
-			cout << "♠";
-			break;
-		case 3:
-			cout << "♥";
-			break;
-		case 4:
-			cout << "♣";
-			break;
+			cout << endl;
+			Sleep(80);
 		}
 	}
-}
 
+	for (int i = 0; i < 20; i++) // 뒷판
+	{
+		back[i] = '0' + i / 2;
+	}
+
+	for (int i = 0; i < 100; i++) //셔플
+	{
+		int shuffle = rand() % 20;
+		int shuffle2 = rand() % 20;
+		char temp = back[shuffle];
+		back[shuffle] = back[shuffle2];
+		back[shuffle2] = temp;
+	}
+
+
+
+	cout << "어떤 카드를 뒤집으시겠습니까?" << endl;
+	Sleep(200);
+	cin >> num;
+	//감춘 패가 전부 공개되게 코드 작성
+	   //time 함수로 유지되는 함수에 5초뒤 풀리게 코드 작성
+
+
+  
+   
+        // 선택한 카드를 뒤집어 앞판을 업데이트하고 출력
+        front[num - 1] = back[num - 1];
+        if (num == 77)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                if (i != num - 1)
+
+                switch (back[i])
+                {
+                case 0 + '0':
+                    cout << "☆";
+                    break;
+                case 1 + '0':
+                    cout << "★";
+                    break;
+                case 2 + '0':
+                    cout << "◇";
+                    break;
+                case 3 + '0':
+                    cout << "◆";
+                    break;
+                case 4 + '0':
+                    cout << "♤";
+                    break;
+                case 5 + '0':
+                    cout << "♠";
+                    break;
+                case 6 + '0':
+                    cout << "♡";
+                    break;
+                case 7 + '0':
+                    cout << "♥";
+                    break;
+                case 8 + '0':
+                    cout << "♧";
+                    break;
+                case 9 + '0':
+                    cout << "♣";
+                    break;
+                default:
+                    break;
+                }
+                if (i % 5 == 4)
+                {
+                    cout << endl;          
+                }
+            }
+            Sleep(5000);
+            system("cls");
+            main();
+        }
+        else {
+            for (int i = 0; i < 20; i++)
+            {
+                if (i != num - 1)
+                {
+                    cout << front[i];
+                }
+
+                switch (front[i])
+                {
+                case 0 + '0':
+                    cout << "☆";
+                    break;
+                case 1 + '0':
+                    cout << "★";
+                    break;
+                case 2 + '0':
+                    cout << "◇";
+                    break;
+                case 3 + '0':
+                    cout << "◆";
+                    break;
+                case 4 + '0':
+                    cout << "♤";
+                    break;
+                case 5 + '0':
+                    cout << "♠";
+                    break;
+                case 6 + '0':
+                    cout << "♡";
+                    break;
+                case 7 + '0':
+                    cout << "♥";
+                    break;
+                case 8 + '0':
+                    cout << "♧";
+                    break;
+                case 9 + '0':
+                    cout << "♣";
+                    break;
+                default:
+                    break;
+                }
+
+                if (i % 5 == 4)
+                {
+                    cout << endl;
+                }
+            }
+        }
+    }
