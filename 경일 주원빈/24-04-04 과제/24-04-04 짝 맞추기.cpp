@@ -112,6 +112,7 @@ void main()
    
         // 선택한 카드를 뒤집어 앞판을 업데이트하고 출력
         front[num - 1] = back[num - 1];
+
         if (num == 77)
         {
             for (int i = 0; i < 20; i++)
@@ -158,9 +159,56 @@ void main()
                     cout << endl;          
                 }
             }
-            Sleep(5000);
-            system("cls");
-            main();
+
+        }
+
+        if (num == 78)
+        {
+            for (int i = 0; i < 18; i++)
+            {
+                if (i != num - 1)
+
+                    switch (back[i])
+                    {
+                    case 0 + '0':
+                        cout << "☆";
+                        break;
+                    case 1 + '0':
+                        cout << "★";
+                        break;
+                    case 2 + '0':
+                        cout << "◇";
+                        break;
+                    case 3 + '0':
+                        cout << "◆";
+                        break;
+                    case 4 + '0':
+                        cout << "♤";
+                        break;
+                    case 5 + '0':
+                        cout << "♠";
+                        break;
+                    case 6 + '0':
+                        cout << "♡";
+                        break;
+                    case 7 + '0':
+                        cout << "♥";
+                        break;
+                    case 8 + '0':
+                        cout << "♧";
+                        break;
+                    case 9 + '0':
+                        cout << "♣";
+                        break;
+                    default:
+                        break;
+                    }
+                if (i % 5 == 4)
+                {
+                    cout << endl;
+                }
+            }
+
         }
         else {
             for (int i = 0; i < 20; i++)
