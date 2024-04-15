@@ -1,10 +1,15 @@
+#include "battleLogo.cpp"
+#include "startOption.h"
 #include "turnFight.h"
-#include "turnFight.cpp"
 
 
 
 
 void main()
 {
+	battlelogo();
+	startOption startOption;
+	startOption.startGame();
+	startOption.endGame();
 
 }
