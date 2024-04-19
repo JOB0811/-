@@ -1,45 +1,71 @@
+#include<conio.h>
+#include<time.h>
 #include<iostream>
 #include<windows.h>
+
 
 using std::cout;
 using std::cin;
 using std::endl;
 
+;
 
-int mapWidth = 120;
-int mapHeight = 50;
 
-class gamePlay
+void gotoxy(int x, int y)
 {
-public:
+	COORD pos;
+	pos.X = x;
+	pos.Y = y;
 
-	void printSilling()
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+}
+
+void  textColor(int foreground, int background)
+{
+	int color = foreground + background * 16;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+
+int GetKeyDown()
+{
+	if (_kbhit() != 0)
 	{
-		for (int i = 0; i <= mapWidth; i++)
+		return _getch();
+	}
+	return 0;
+}
+
+
+
+{
+	void among(int amongY)
+	{
+		gotoxy(0, amongY);
+		static bool legani = true;
+		textColor(15, 15);
+		cout << "   ¡á¡á¡á" << endl;
+		cout << "¡á¡á¡á¡á¡á" << endl;
+		cout << "¡á¡á¡á¡á¡á" << endl;
+		cout << "  ¡á    ¡á" << endl;
+	}
+
+
+	void DrawGround(int groundY)
+	{
+		gotoxy(0, groundY);
+		textColor(15, 15);
+		for (int i = 0; i < 80; ++i)
 		{
-			gotoxy(i, mapHeight / 4);
 			cout << "_";
 		}
 	}
 
-
-	void printRoad()
+	void Obstacle(int ObstacleX)
 	{
-		for (int i = 0; i <= mapWidth; i++)
-		{
-			gotoxy(i, mapHeight / 2 + 2);
-			cout << "_";
-		}
-	}
+		gotoxy(obstacleX, )
 
-	void gotoxy(int x, int y)
-	{
-		COORD pos;
-		pos.X = x;
-		pos.Y = y;
 
-		SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
-	}
-};
+
+
 
 

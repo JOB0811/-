@@ -1,6 +1,7 @@
 #include "runGameSelect.h"
 #include "key.h"
-#include "gamePlay.h"
+//#include "gamePlay.h"
+//#include "gamePlay.cpp"
 #include<iomanip>
 
 int choice;
@@ -9,7 +10,6 @@ int choice;
 void main()
 {
 	runGameSelect runTitle;
-	gamePlay playGame;
 	void (runGameSelect:: * RunGameSelect)() = &runGameSelect::RunGameSelect; // 멤버 함수 포인터 선언
 
 	(runTitle.*RunGameSelect)(); // 멤버 함수 포인터를 통해 멤버 함수 호출
@@ -21,6 +21,8 @@ void main()
 	runTitle.gotoXy(35, 21);
 	cout << "게임 종료";
 
+	runTitle.among();
+
 
 	while (true)
 	{
@@ -29,16 +31,16 @@ void main()
 
 
 		{
+
 			runTitle.gotoXy(35, 22);
 			choice = enterkey.keyControl();
-
 			system("cls");
 
 			switch (choice) {
 			case KB_UP:
 				cout << "게임을 시작합니다" << endl;
 				system("cls");
-				playGame.printRoad();
+				/*DrawGround(5);*/
 				//게임 페이지 작성 후 넣기
 				break;
 			case KB_DOWN:
