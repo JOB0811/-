@@ -127,12 +127,6 @@ int main(void)
             isBottom = false;
         }
 
-        // 같은 키를 눌렀을 때 다시 점프하도록 수정
-        if (GetKeyDown() == 'z' && !isJumping && !isBottom)
-        {
-            isJumping = true;
-        }
-
         if (isJumping)
         {
             dinoY -= gravity;

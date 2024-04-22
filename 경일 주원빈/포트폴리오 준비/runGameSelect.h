@@ -28,7 +28,7 @@ void runGameSelect::RunGameSelect()
 
 	int picY = 4;
 	textColor(15,15);
-	gotoXy(7, picY);
+	gotoXy(67, picY+10);
 	cout << "■■■■■■■■■";
 	textColor(0, 0);
 	cout << "■■■";
@@ -42,7 +42,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■";
 	textColor(15, 15);
 	cout << "■■■■■■" << endl; //1라인
-	gotoXy(7, picY + 1);
+	gotoXy(67, picY + 21);
 	textColor(15, 15);
 	cout << "■";
 	textColor(0, 0);
@@ -77,7 +77,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■■";
 	textColor(15, 15);
 	cout << "■■" << endl; //2라인
-	gotoXy(7, picY + 2);
+	gotoXy(67, picY + 22);
 	textColor(15, 15);
 	cout << "■";
 	textColor(0, 0);
@@ -108,7 +108,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■";
 	textColor(15, 15);
 	cout << "■■■" << endl; //3라인
-	gotoXy(7, picY + 3);
+	gotoXy(67, picY + 23);
 	textColor(15, 15);
 	cout << "■";
 	textColor(0, 0);
@@ -139,7 +139,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■";
 	textColor(15, 15);
 	cout << "■■" << endl; // 4라인
-	gotoXy(7, picY + 4);
+	gotoXy(67, picY + 24);
 	textColor(15, 15);
 	cout << "■";
 	textColor(0, 0);
@@ -180,7 +180,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■";
 	textColor(15,15);
 	cout << "■" << endl; // 5라인
-	gotoXy(5, picY + 5);
+	gotoXy(65, picY + 25);
 	textColor(15, 15);
 	cout << "■";
 	textColor(0, 0);
@@ -207,7 +207,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■■■■■■■■■";
 	textColor(15, 15);
 	cout << "■■" << endl; // 6라인
-	gotoXy(5, picY + 6);
+	gotoXy(65, picY + 26);
 	cout << "■";
 	textColor(0, 0);
 	cout << "■■■■■■■■";
@@ -233,7 +233,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■■■■■";
 	textColor(15, 15);
 	cout << "■■" << endl; // 7라인
-	gotoXy(5, picY + 7);
+	gotoXy(65, picY + 27);
 	cout << "■";
 	textColor(0, 0);
 	cout << "■■■■■■■";
@@ -255,7 +255,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■■■";
 	textColor(15, 15);
 	cout << "■■■" << endl; // 8라인
-	gotoXy(5, picY + 8);
+	gotoXy(65, picY + 28);
 	cout << "■";
 	textColor(0, 0);
 	cout << "■■";
@@ -281,7 +281,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■■■";
 	textColor(15, 15);
 	cout << "■■" << endl; //9라인
-	gotoXy(5, picY + 9);
+	gotoXy(65, picY + 29);
 	cout << "■";
 	textColor(0,0);
 	cout << "■■";
@@ -311,7 +311,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■■■";
 	textColor(15, 15);
 	cout << "■■" << endl; // 10라인
-	gotoXy(5, picY + 10);
+	gotoXy(65, picY + 30);
 	cout << "■■■■";
 	textColor(0, 0);
 	cout << "■";
@@ -333,7 +333,7 @@ void runGameSelect::RunGameSelect()
 	cout << "■";
 	textColor(15, 15);
 	cout << "■■■■■"; // 11라인
-	gotoXy(35, picY + 11);
+	gotoXy(95, picY + 31);
 	cout << "■■■" << endl;
 
 
