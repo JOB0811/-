@@ -2,205 +2,244 @@
 #include<conio.h>
 #include<time.h>
 
-int standY = 2;
-int jumpY = 1;
+int standy = 2;
+int jumpy = 1;
+int slidey = 2;
 
 void picture::heartpicture()
 {
 	gotoxy(5, 2);
-	textColor(4, 4);
+	textcolor(4, 4);
 	cout << "■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■";
 	gotoxy(4, 3);
-	textColor(4, 4);
+	textcolor(4, 4);
 	cout << "■■■■■";
 	gotoxy(5, 4);
-	textColor(4, 4);
+	textcolor(4, 4);
 	cout << "■■■";
 	gotoxy(6, 5);
-	textColor(4, 4);
+	textcolor(4, 4);
 	cout << "■";
 }
 
-void picture::penStand(int penY)
+void picture::penStand()
 {
-	gotoxy(5, standY); // 1라인
-	textColor(8, 8);
+	gotoxy(5, standy); // 1라인
+	textcolor(8, 8);
 	cout << "■■■■";
-	gotoxy(4, standY + 1); // 2라인
-	textColor(8, 8);
+	gotoxy(4, standy + 1); // 2라인
+	textcolor(8, 8);
 	cout << "■■■■■■";
-	gotoxy(3, standY + 2); // 3라인
-	textColor(8, 8);
+	gotoxy(3, standy + 2); // 3라인
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	gotoxy(3, standY + 3); // 4라인
-	textColor(8, 8);
+	gotoxy(3, standy + 3); // 4라인
+	textcolor(8, 8);
 	cout << "■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■";
-	gotoxy(2, standY + 4); // 5라인
-	textColor(8, 8);
+	gotoxy(2, standy + 4); // 5라인
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■■";
-	gotoxy(2, standY + 5); // 6라인
-	textColor(8, 8);
+	gotoxy(2, standy + 5); // 6라인
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(2, standY + 6); // 7라인
-	textColor(8, 8);
+	gotoxy(2, standy + 6); // 7라인
+	textcolor(8, 8);
 	cout << "■■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(2, standY + 7); // 8라인
-	textColor(8, 8);
+	gotoxy(2, standy + 7); // 8라인
+	textcolor(8, 8);
 	cout << "■■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(2, standY + 8); // 9라인
-	textColor(8, 8);
+	gotoxy(2, standy + 8); // 9라인
+	textcolor(8, 8);
 	cout << "■■■■■■■■";
-	gotoxy(2, standY + 9); // 10라인
-	textColor(8, 8);
+	gotoxy(2, standy + 9); // 10라인
+	textcolor(8, 8);
 	cout << "■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■■";
-	gotoxy(4, standY + 10); // 11라인
-	textColor(8, 8);
+	gotoxy(4, standy + 10); // 11라인
+	textcolor(8, 8);
 	cout << "■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
 }
 
 void picture::penJump(int penY)
 {
-	gotoxy(6, jumpY); // 1라인
-	textColor(8, 8);
+	gotoxy(6, jumpy); // 1라인
+	textcolor(8, 8);
 	cout << "■■■";
-	gotoxy(5, jumpY + 1); // 2라인
-	textColor(8, 8);
+	gotoxy(5, jumpy + 1); // 2라인
+	textcolor(8, 8);
 	cout << "■■■■■"; // 4라인
-	gotoxy(4, jumpY + 2);
-	textColor(8, 8);
+	gotoxy(4, jumpy + 2);
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(3, jumpY + 3); // 4라인
-	textColor(8, 8);
+	gotoxy(3, jumpy + 3); // 4라인
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■■■";
-	gotoxy(3, jumpY + 4); // 5라인
-	textColor(8, 8);
+	gotoxy(3, jumpy + 4); // 5라인
+	textcolor(8, 8);
 	cout << "■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(2, jumpY + 5); // 6라인
-	textColor(8, 8);
+	gotoxy(2, jumpy + 5); // 6라인
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■";
-	gotoxy(1, jumpY + 6); // 7라인
-	textColor(8, 8);
+	gotoxy(1, jumpy + 6); // 7라인
+	textcolor(8, 8);
 	cout << "■■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(2, jumpY + 7); // 8 라인
-	textColor(8, 8);
+	gotoxy(2, jumpy + 7); // 8 라인
+	textcolor(8, 8);
 	cout << "■■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	gotoxy(2, jumpY + 8); // 9라인
-	textColor(8, 8);
+	gotoxy(2, jumpy + 8); // 9라인
+	textcolor(8, 8);
 	cout << "■■■■■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■";
-	gotoxy(2, jumpY + 9); // 10라인
-	textColor(8, 8);
+	gotoxy(2, jumpy + 9); // 10라인
+	textcolor(8, 8);
 	cout << "■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■■■■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■■";
-	gotoxy(3, jumpY + 10); // 11라인
-	textColor(14, 14);
+	gotoxy(3, jumpy + 10); // 11라인
+	textcolor(14, 14);
 	cout << "■■";
-	textColor(8, 8);
+	textcolor(8, 8);
 	cout << "■■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■■";
-	gotoxy(3, jumpY + 11); // 12라인
-	textColor(14, 14);
+	gotoxy(3, jumpy + 11); // 12라인
+	textcolor(14, 14);
 	cout << "■■";
-	textColor(15, 15);
+	textcolor(15, 15);
 	cout << "■■■■";
-	textColor(14, 14);
+	textcolor(14, 14);
 	cout << "■";
 
 }
 
-
-
-
-
-
-
-
-
-
-void gotoxy(int x, int y)
+void picture::penSlide(int penY)
 {
+	gotoxy(4, slidey); // 1라인
+	textcolor(8, 8);
+	cout << "■■■■■■■";
+	gotoxy(3, slidey + 1); // 2라인
+	textcolor(8, 8);
+	cout << "■■■■■■■■";
+	textcolor(15, 15);
+	cout << "■";
+	gotoxy(3, slidey + 2); // 3라인
+	textcolor(8, 8);
+	cout << "■■■■■■";
+	textcolor(15, 15);
+	cout << "■■■■";
+	gotoxy(3, slidey + 3); // 4라인
+	cout << "■■■■■";
+	textcolor(15, 15);
+	cout << "■■■■■";
+	gotoxy(2, slidey + 4); // 5라인
+	textcolor(14, 14);
+	cout << "■■■";
+	textcolor(8, 8);
+	cout << "■";
+	textcolor(15, 15);
+	cout << "■■■■■";
+	textcolor(14, 14);
+	cout << "■■■";
+	gotoxy(2, slidey + 5); // 6라인
+	textcolor(14, 14);
+	cout << "■■";
+	textcolor(8, 8);
+	cout << "■■";
+	textcolor(15, 15);
+	cout << "■■■■■";
+	textcolor(14, 14);
+	cout << "■";
+	textcolor(8, 8);
+	cout << "■";
+	gotoxy(4, slidey + 6); // 7라인
+	textcolor(8, 8);
+	cout << "■■";
+	textcolor(15, 15);
+	cout << "■■■■■";
+	textcolor(8, 8);
+	cout << "■";
+}
+
+
+
+void gotoxy(int x, int y) {
 	COORD pos;
 	pos.X = x;
 	pos.Y = y;
-
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 
-void  textColor(int foreground, int background)
-{
+void textcolor(int foreground, int background) {
 	int color = foreground + background * 16;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }

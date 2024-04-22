@@ -10,7 +10,7 @@ class picture // 도트 모음 클래스
 {
 public:
 	void heartpicture();
-	void penStand(int penY);
+	void penStand();
 	void penJump(int penY);
 	void penSlide(int penY);
 	void background();
