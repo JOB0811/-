@@ -2,14 +2,18 @@
 #include<time.h>
 #include<iostream>
 #include<windows.h>
-#include "gamePlay.h"
+#include "character.h"
 
 
 using std::cout;
 using std::cin;
 using std::endl;
 
-;
+
+void fullscreen()
+{
+	SetConsoleDisplayMode(GetStdHandle(STD_OUTPUT_HANDLE), CONSOLE_FULLSCREEN_MODE, 0);
+}
 
 
 void gotoxy(int x, int y)
@@ -36,34 +40,41 @@ int GetKeyDown()
 	return 0;
 }
 
-
-
+int gamePlay()
 {
-	void among(int amongY)
-	{
-		gotoxy(0, amongY);
-		static bool legani = true;
-		textColor(15, 15);
-		cout << "   ■■■" << endl;
-		cout << "■■■■■" << endl;
-		cout << "■■■■■" << endl;
-		cout << "  ■    ■" << endl;
-	}
+    fullscreen();
+    character pen;
+    bool isJumping = false;
+    bool isBottom = true;
+
+    while (true) {
+        // z 키를 눌렀을 때 점프
+        if (GetKeyDown() == 'z' && isBottom) {
+            isJumping = true;
+            isBottom = false;
+        }
+
+      
+        pen.penStand(pen&penY, isJumping, isBottom);
+
+       
+        system("cls");
+
+        cout << "Current penY: " << penY << endl;
+
+        // 키 입력을 대기하지 않고 1초마다 반복
+        Sleep(1000);
+    }
+
+    return 0;
+}
 
 
-	void DrawGround(int groundY)
-	{
-		gotoxy(0, groundY);
-		textColor(15,15);
-		for (int i = 0; i < 80; ++i)
-		{
-			cout << "_";
-		}
-	}
 
-	void Obstacle(int ObstacleX)
-	{
-		gotoxy(obstacleX,)
+	
+
+
+
 
 
 

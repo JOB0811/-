@@ -8,7 +8,6 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-;
 
 
 void gotoxy(int x, int y)
